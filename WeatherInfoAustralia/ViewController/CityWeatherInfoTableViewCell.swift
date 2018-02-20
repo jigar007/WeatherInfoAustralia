@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class CityWeatherInfoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cityName: UILabel!
@@ -22,5 +21,4 @@ class CityWeatherInfoTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }

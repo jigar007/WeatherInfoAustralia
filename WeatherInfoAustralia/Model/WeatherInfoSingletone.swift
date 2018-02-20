@@ -7,13 +7,17 @@
 //
 
 import UIKit
+import Foundation
 
 class WeatherInfoSingletone: NSObject
 {
+
     class var sharedInstance: WeatherInfoSingletone {
         struct Static {
             static let instance: WeatherInfoSingletone = WeatherInfoSingletone()
         }
+        var index1 : Int = 0
+
         return Static.instance
     }
     
@@ -21,4 +25,11 @@ class WeatherInfoSingletone: NSObject
         let modelObject: WeatherInformation = WeatherInformation(json: data)!
         return modelObject
     }
+}
+
+
+class InfoDetail {
+    
+    static let sharedInstant:InfoDetail = InfoDetail()
+    var selectedWeatherInfo: WeatherInformation = WeatherInformation()
 }
